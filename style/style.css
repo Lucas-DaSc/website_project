@@ -1,0 +1,414 @@
+/* style.css */
+
+/* Corps */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #faf9f7;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 0px;
+    /* pour que le contenu ne soit pas caché par la navbar */
+}
+
+/* Header */
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    /* toujours collée en haut */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(240, 239, 232, 0.15);
+    /* légèrement opaque */
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    /* petite ombre pour se détacher */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #6b7b6b;
+    color: white;
+}
+
+.navbar a.special-link {
+    display: inline-block;
+    width: 50px;
+    /* largeur de ton image */
+    height: 50px;
+    /* hauteur de ton image */
+    text-indent: -9999px;
+    /* cache le texte */
+    background-image: url('../images/logo.png');
+    /* ton image transparente */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* CTA Button */
+.cta {
+    background: #6b7b6b;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cta:hover {
+    background: #556655;
+}
+
+/* Section Hero */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.0);
+    padding: 0 20px;
+    border-radius: 8px;
+}
+
+.hero-text p {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    /* top right bottom left = 0 */
+    background: rgba(0, 0, 0, 0.4);
+    /* intensité du filtre */
+}
+
+.hero-text .cta {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+}
+
+/* Section hero pour grande image */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-section .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-section .hero-text h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Images différentes */
+.hero-concept {
+    background-image: url('../images/concept.png');
+}
+
+.hero-cours {
+    background-image: url('../images/planning.png');
+}
+
+.hero-contact {
+    background-image: url('../images/contact.png');
+}
+
+.hero-tarif {
+    background-image: url('../images/tarif.png');
+}
+
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    max-width: 2500px;
+    margin: auto;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    /* luxe et élégant */
+    font-weight: 600;
+    font-size: 2rem;
+    /* ajustable selon écran */
+    letter-spacing: 1px;
+    /* petit espacement pour un effet chic */
+    color: white;
+    /* ou blanc si sur image sombre */
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8 px 0 0;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.booking {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-section {
+    margin-top: -50px;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+
+.section-image-texte {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+/* Styles généraux du footer */
+footer {
+    background-color: #0f2f1e;
+    color: white;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: white;
+    /* empêche le violet pour les liens visités */
+}
+
+.newsletter-form input[type="email"] {
+    padding: 5px;
+    width: 70%;
+    border: none;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.newsletter-form button {
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: #0f2f1e;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.newsletter-form button:hover {
+    opacity: 0.9;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    border-top: 1px solid #ffffff33;
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    margin-right: 15px;
+}
+
+.footer-bottom div:last-child a {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+@media (max-width: 768px) {
+
+    .footer-container,
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-bottom div {
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom div:last-child a {
+        margin-left: 0;
+    }
+}
+
+
+/* Contact Form  */
+
+.contact-form {
+    background: #f7f3ea;
+    padding: 60px 80px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 12px 0;
+    margin-bottom: 25px;
+    font-size: 14px;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #000;
+}
+
+.contact-form .privacy {
+    display: flex;
+    /* met la checkbox et le texte sur la même ligne */
+    align-items: flex-start;
+    /* aligne la checkbox avec le haut du texte */
+}
+
+.contact-form .privacy input[type="checkbox"] {
+    margin: 0;
+    /* supprime tout espace par défaut */
+    margin-right: 6px;
+    /* petit espace juste pour respirer */
+    width: 16px;
+    /* taille standard, ajustable */
+    height: 16px;
+}
+
+.contact-form button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 40px;
+    background: #0b3b2e;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    opacity: 0.9;
+}

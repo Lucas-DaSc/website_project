@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio - Studio Pilates Reformer</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+
+    <section class="hero-section hero-concept">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1 style="font-size: 100px; color: white;">CONCEPT</h1>
+    </section>
+
+    <section>
+        <h2 style="margin-top: 20px;margin-bottom: 20px; text-align: center; font-size: 36px;color: black">Notre Studio
+        </h2>
+        <p style="text-align: center;">
+            Notre studio vous accueille dans un espace calme et lumineux, dédié au mouvement conscient, à la posture et
+            au bien-être durable. <br>
+            Chaque séance est pensée pour vous accompagner avec expertise et bienveillance.
+        </p>
+    </section>
+
+    <section>
+        <h2 style="text-align: center; font-size: 26px; color: black">Le Pilates Reformer</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Renforcement</h3>
+                <p>Travail en profondeur des muscles pour un corps fort et équilibré.</p>
+                <img src="../images/logo.png" alt="Renforcement">
+            </div>
+            <div class="card">
+                <h3>Mobilité</h3>
+                <p>Améliore la souplesse et la liberté de mouvement sans impact.</p>
+                <img src="../images/logo.png" alt="Renforcement">
+            </div>
+            <div class="card">
+                <h3>Posture</h3>
+                <p>Corrige les déséquilibres et soulage les tensions du quotidien.</p>
+                <img src="../images/logo.png" alt="Renforcement">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <!-- Script-->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
